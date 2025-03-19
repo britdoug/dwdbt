@@ -1,0 +1,11 @@
+version: 1
+
+sources:
+  - name: olivers
+    database: britleydouglass
+    schema: insurance_dw_source
+    tables:
+      - name: agents
+      - name: claims
+      - name: customers
+      - name: policies
