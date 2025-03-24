@@ -1,15 +1,15 @@
 {{ config(
     materialized = 'table',
-    schema = 'dw_oliver_source'
+    schema = 'oliver_dw'
     )
 }}
 
 
 select
-storeid as store_key,
-storeid,
+store_id as store_key,
+store_id,
 store_name,
-store_street,
-store_city,
-store_state
-FROM {{ source('oliver', 'store') }}
+street,
+city,
+state
+FROM {{ source('oliver_landing', 'store') }}

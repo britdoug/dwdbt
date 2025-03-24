@@ -1,7 +1,7 @@
 version: 1
 
 sources:
-  - name: oliver
+  - name: oliver_landing
     database: britleydouglass
     schema: oliver_dw_source
     tables:

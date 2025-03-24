@@ -1,13 +1,13 @@
 {{ config(
     materialized = 'table',
-    schema = 'dw_oliver_source'
+    schema = 'oliver_dw'
     )
 }}
 
 
 select
-productid as product_key,
-productid,
-productname,
+product_id as product_key,
+product_id,
+product_name,
 description
-FROM {{ source('oliver', 'product') }}
+FROM {{ source('oliver_landing', 'product') }}

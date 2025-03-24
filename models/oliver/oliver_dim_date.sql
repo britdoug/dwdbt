@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'table',
-    schema = 'oliver_dw_source'
+    schema = 'oliver_dw'
     )
 }}
 
@@ -9,8 +9,8 @@ with cte_date as (
 )
 
 SELECT
-orderdate as date_key,
-orderdate,
+date_day as date_key,
+date_day,
 day_of_week,
 month_of_year,
 quarter_of_year,
